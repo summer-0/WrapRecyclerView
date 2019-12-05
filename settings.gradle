@@ -1,0 +1,2 @@
+include ':app', ':wraprecyclerview'
+rootProject.name='WrapRecyclerViewDemo'
