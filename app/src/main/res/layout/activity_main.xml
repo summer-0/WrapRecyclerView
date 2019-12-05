@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_addHeader_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加头部到顶端" />
+        <Button
+            android:id="@+id/btn_addHeader_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加头部到中间" />
+        <Button
+            android:id="@+id/btn_addHeader_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加头部到末端" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_addFooter_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加底部到顶端" />
+        <Button
+            android:id="@+id/btn_addFooter_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加底部到中间" />
+        <Button
+            android:id="@+id/btn_addFooter_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加底部到末端" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_deleteHeader_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除index=1头部" />
+        <Button
+            android:id="@+id/btn_deleteHeader_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除指定头部" />
+        <Button
+            android:id="@+id/btn_deleteHeader_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除最后一个头部" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_deleteFooter_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除index=1底部" />
+        <Button
+            android:id="@+id/btn_deleteFooter_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除指定底部" />
+        <Button
+            android:id="@+id/btn_deleteFooter_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除最后一个底部" />
+    </LinearLayout>
+    <com.xinhua.wraprecyclerviewdemo.recyclerview.WrapRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
