@@ -23,6 +23,6 @@
 ```
   dependencies {
           implementation 'androidx.recyclerview:recyclerview:1.1.0'  //系统的RecyclerView
-	        implementation 'com.github.summer-0:WrapRecyclerView:1.0.7'
+	  implementation 'com.github.summer-0:WrapRecyclerView:1.0.7'
 	}
 ```
