@@ -18,7 +18,6 @@ import java.util.List;
  * des :
  */
 public class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private static final String TAG = "xh_tag_Wrap_Adapter";
     private RecyclerView.Adapter mAdapter;
     private SparseArray<View> mHeaderViews;
     private SparseArray<View> mFooterViews;
@@ -37,7 +36,6 @@ public class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Log.d(TAG, "onCreateViewHolder: viewType=" + viewType);
         if (mHeaderViews.get(viewType) != null) {
             return new ViewHolder(mHeaderViews.get(viewType));
         } else if (mFooterViews.get(viewType) != null) {
@@ -48,7 +46,6 @@ public class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: position=" + position);
         if (isHeaderView(position) || isFooterView(position)) {
             return;
         }
@@ -57,8 +54,6 @@ public class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public int getItemViewType(int position) {
-        // TODO: 2019/11/22  类型唯一
-        Log.d(TAG, "getItemViewType: " + position);
         if (isHeaderView(position)) {
             return mHeaderKey.get(position);
         } else if (isFooterView(position)) {
@@ -77,8 +72,6 @@ public class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     protected void addHeaderView(View view) {
-//        mHeaderViewsArrayMap.put(getHeaderItemCount() + ITEM_TYPE_HEADER, view);
-        Log.d(TAG, "addHeaderView: view->hashCode = " + view.hashCode());
         mHeaderKey.add(view.hashCode());
         mHeaderViews.put(view.hashCode(), view);
     }
@@ -89,7 +82,6 @@ public class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     protected void addHeaderViewAndNotify(View view) {
-//        mHeaderViewLinkedList.add(view);
         mHeaderKey.add(view.hashCode());
         mHeaderViews.put(view.hashCode(), view);
         notifyItemInserted(getHeaderItemCount() - 1);
