@@ -22,7 +22,6 @@ import java.util.List;
  */
 public class WrapRecyclerView extends RecyclerView {
 
-    private static final String TAG = "xh_tag_WrapRecyclerView";
     private List<View> mHeaderViews;
     private ArrayMap<Integer, View> mHeaderViewResMap;
     private List<View> mFooterViews;
@@ -140,7 +139,6 @@ public class WrapRecyclerView extends RecyclerView {
      * @param layoutId 布局文件
      */
     public void addHeaderView(@LayoutRes int layoutId) {
-        Log.d(TAG, "addHeaderView: " + layoutId);
         if (layoutId == 0) {
             throw new IllegalArgumentException("layoutId is invalid on addHeaderView(int layoutId)");
         }
